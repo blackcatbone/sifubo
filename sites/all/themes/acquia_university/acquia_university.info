@@ -1,0 +1,37 @@
+name = Acquia University
+description = A variation of the Acquia Training sub theme of Acquia Swiss Bootstrap 3.
+core = 7.x
+base theme = acquia_swiss
+
+; Regions
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[featured]       = 'Featured'
+regions[secondary_1]    = 'Secondary Block 1'
+regions[secondary_2]    = 'Secondary Block 2'
+regions[secondary_3]    = 'Secondary Block 3'
+regions[secondary_4]    = 'Secondary Block 4'
+regions[tertiary_featured] = 'Additional Featured Content'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Sidebar first'
+regions[sidebar_second] = 'Sidebar second'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+; Stylesheets
+stylesheets[all][] = css/acquia-training.css
+stylesheets[all][] = css/acquia-u.css
+
+; Scripts
+;scripts[] = bootstrap/js/bootstrap.min.js
+scripts[] = js/jquery.sticky.js
+scripts[] = js/training.js
+scripts[] = js/acquia-university.js
+
+;exclude[js][] = 'sites/all/themes/bootstrap/js/bootstrap.js'
+
+; Disable the CDN as we are using our own source files.
+settings[cdn_bootstrap] = ''

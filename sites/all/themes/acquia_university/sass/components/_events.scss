@@ -1,0 +1,74 @@
+//
+// Events section and nodes.
+// --------------------------------------------------
+
+.node-type-event {
+
+  .region-sidebar-second {
+
+    // Add some top spacing to the second sidebar for mobile, and more for non-mobile.
+    margin-top: $marginDefault;
+    @media (min-width: 767px) {
+      margin-top: 120px;
+    }
+
+    // Give sticky elements in the sidebar a set width to make their text wrap properly.
+    .sticky-wrapper.is-sticky section {
+      width: 18.5%;
+    }
+  }
+
+  .field-name-field-location .field-label {
+    font-size: $h4FontSize;
+    margin-bottom: $baseLineHeight / 2;
+    margin-top: $marginDefault;
+  }
+
+  .vcard {
+    float: left;
+    width: 40%;
+    padding-right: $paddingDefault;
+
+    .map-link {
+      margin-top: $marginDefault / 2;
+    }
+  }
+
+  .gmap-map {
+    width: 60% !important;
+  }
+
+  // Make the Gmap responsive at small screen widths.
+  @media (max-width: 430px) {
+    .vcard,
+    .gmap-map {
+      width: 100% !important;
+      float: none;
+    }
+  }
+
+  // Give the map a top margin when it wraps below the address.
+  @media (max-width: 992px) {
+    .gmap-map {
+      margin-top: $marginDefault;
+    }
+  }
+
+  // Hide the company profile node title if we have a logo showing.
+  .views-field-field-company-logo + .views-field-title {
+    display: none;
+  }
+
+}
+
+// Revert default Bootstrap panel styling on VBO exposed filter on My Events Views.
+.view-my-events {
+  fieldset.panel-default {
+    border: 0;
+    margin-bottom: 0;
+
+    legend {
+      display: none;
+    }
+  }
+}

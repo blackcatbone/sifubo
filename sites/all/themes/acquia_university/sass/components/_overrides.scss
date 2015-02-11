@@ -1,0 +1,258 @@
+//
+// Style overrides for training site.
+// --------------------------------------------------
+
+// Add Bootstrap icon font. Use classes to get the icons to appear (see http://getbootstrap.com/components/#glyphicons).
+@include font-face('Glyphicons Halflings', font-files('glyphicons-halflings-regular.woff', 'glyphicons-halflings-regular.eot', 'glyphicons-halflings-regular.ttf', 'glyphicons-halflings-regular.svg'));
+
+body {
+  font-size: $baseFontSize;
+}
+
+// Text color overrides.
+.text-primary {
+  color: $swissBlue;
+}
+.text-success {
+  color: $color-success;
+}
+.text-warning {
+  color: $color-warning;
+}
+.text-danger {
+  color: $color-error;
+}
+
+.views-bootstrap-accordion-plugin-style .panel-title > a {
+  color: $color-link;
+}
+
+//
+// Structure
+// -------------------------
+@media (min-width: 767px) {
+  .region-sidebar-second {
+    padding-top: 40px; // Search bar sits above this now, so give it some room.
+  }
+}
+
+// Push the floating block a bit further down because of admin_menu.
+body.admin-menu .sticky-wrapper.is-sticky section {
+  top: 40px !important;
+}
+
+.breadcrumb {
+  padding: 18px 15px 0 5px;
+}
+
+//
+// General
+// -------------------------
+
+// Some common margin and padding classes.
+$sides: top, right, bottom, left;
+
+.margin {
+  margin: $marginDefault
+}
+.margin-2x {
+  margin: $marginDefault * 2;
+}
+.margin-half {
+  margin: $marginDefault / 2;
+}
+.no-margin {
+  margin: 0;
+}
+
+.padding {
+  padding: $paddingDefault;
+}
+.padding-2x {
+  padding: $paddingDefault * 2;
+}
+.padding-half {
+  padding: $paddingDefault / 2;
+}
+.no-padding {
+  padding: 0;
+}
+
+@each $side in $sides {
+  .margin-#{$side} {
+    margin-#{$side}: $marginDefault;
+  }
+  .margin-#{$side}-2x {
+    margin-#{$side}: $marginDefault * 2;
+  }
+  .margin-#{$side}-half {
+    margin-#{$side}: $marginDefault / 2;
+  }
+  .no-margin-#{$side} {
+    margin-#{$side}: 0;
+  }
+  .padding-#{$side} {
+    padding-#{$side}: $paddingDefault;
+  }
+  .padding-#{$side}-2x {
+    padding-#{$side}: $paddingDefault * 2;
+  }
+  .padding-#{$side}-half {
+    padding-#{$side}: $paddingDefault / 2;
+  }
+  .no-padding-#{$side} {
+    padding-#{$side}: 0;
+  }
+}
+
+
+//
+// Headings
+// -------------------------
+
+// Make some smaller headers font sizes.
+h2.medium {
+  font-size: $h2FontSize - 3px;
+  font-weight: 500;
+}
+
+h2.small {
+  font-size: $h2FontSize - 6px;
+  font-weight: 500;
+}
+
+h3.medium {
+  font-size: $h3FontSize - 3px;
+  font-weight: 500;
+}
+
+h3.small {
+  font-size: $h3FontSize - 6px;
+  font-weight: 500;
+}
+
+.header-medium {
+  h2 {
+    @extend h2.medium;
+  }
+
+  h3 {
+    @extend h3.medium;
+  }
+}
+
+.header-small {
+  h2 {
+    @extend h2.small;
+  }
+
+  h3 {
+    @extend h3.small;
+  }
+}
+
+.no-header h2,
+.no-header h3 {
+  display: none;
+}
+
+
+//
+// Navbar
+// -------------------------
+
+.region-navigation {
+  // Position user profile block so that it pushes the search bar down into the white section (full width).
+  .block-training-toolkit {
+    text-align: right;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (max-width: 991px) {
+    .an-userprofile-name {
+      display: none;
+    }
+    .block-training-toolkit {
+      text-align: left;
+      margin: 0;
+      position: absolute;
+      right: $marginDefault;
+      top: 12px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .block-training-toolkit {
+      right: 85px;
+      top: 15px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar .region-navigation {
+    max-width: 250px;
+    float: right;
+  }
+}
+
+.not-logged-in .region-navigation {
+  .block-training-toolkit {
+    margin-top: 5px;
+  }
+  @media (max-width: 991px) {
+    .block-training-toolkit {
+      margin-top: -7px;
+    }
+  }
+}
+
+//
+// Nodes
+// -------------------------
+
+// Give some spacing to fields.
+.region-content .node .field.field-label-above,
+.region-content .node .field.field-label-inline {
+  margin-top: $marginDefault;
+}
+
+// Override button colors to use our styleguide colors.
+.btn-primary {
+  background-color: $btnInfoBackground;
+  border-color: $btnInfoBackground;
+
+  a {
+    color: #FFF;
+  }
+}
+
+// Make bootstrap tooltips less black.
+.tooltip.in {
+  opacity: 1;
+}
+.tooltip-inner {
+  background: $grayDark;
+  text-align: left;
+  letter-spacing: 0.05em;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: $grayDark;
+}
+
+// Override default placement of text on carousels
+@media screen and (min-width: 768px) {
+.carousel-caption {
+  left: 0;
+  right: 0;
+  padding-bottom: 30px;
+  background: #222;
+  width: 100%;
+  padding: 30px;
+  opacity: .85;
+  text-align: left;
+}
+}

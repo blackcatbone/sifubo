@@ -1,0 +1,9 @@
+//
+// Tables.
+// --------------------------------------------------
+
+// Matches bootstrap nth-child striping.
+table > tbody > tr.odd > td,
+table > tbody > tr.odd > th {
+  background-color: $tableBackgroundAccent;
+}

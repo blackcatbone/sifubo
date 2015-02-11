@@ -1,0 +1,385 @@
+//
+// Variables (copied from acquia_swiss theme)
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #333;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #46a546;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+
+
+//
+// Default Acquia colors
+// -------------------------
+// Text
+$color-text: #333 !default;
+$color-text-light: tint($color-text, 40) !default;
+$color-text-reverse: #fff !default;
+$color-text-code: #96ff73 !default;
+
+// Status
+$color-highlight: #29aae2 !default;
+$color-unsaved: #ffded0 !default;
+$color-dragging: #feffd5 !default;
+$color-success: #82bb41 !default;
+$color-warning: #f79521 !default;
+$color-error: #cb2026 !default;
+
+// Links
+$color-link: #2fa6e5 !default;
+$color-link-visited: saturate(shade($color-link, 20), 50) !default;
+$color-link-hover: saturate(shade($color-link, 30), 60) !default;
+$color-link-alternate: #f05724 !default;
+$color-link-alternate-visited: saturate(shade($color-link-alternate, 20), 50) !default;
+$color-link-alternate-hover: saturate(tint($color-link-alternate, 20), 50) !default;
+
+// Backgrounds
+$color-background: #fff !default;
+$color-background-alternate: #f9f9f9 !default;
+$color-background-dark: #303030 !default;
+$color-background-highlight: tint($color-highlight, 90) !default;
+$color-background-reverse: #000 !default;
+
+// Borders
+$color-border: #ccc !default;
+$color-border-highlight: tint($color-highlight, 70) !default;
+
+// Forms
+$color-input-background: #fff !default;
+$color-placeholder: $color-border !default;
+
+
+// Swiss colors
+// -------------------------
+$swissBlack:            #222222;
+$swissGray:             #606060;
+$swissBlue:             $color-highlight;
+$swissBlueLight:        $color-link;
+$swissBlueLighter:      $color-link-hover;
+$swissBlueDarker:       #2188b5;
+$swissBlueHoverBg:      rgba(41,170,226,0.1);
+$swissGreen:            $color-success;
+$swissOrange:           $color-warning;
+$swissOrangeLight:      #FF6820;
+$swissRed:              $color-error;
+$swissPink:             $color-unsaved;
+$swissYellowLight:      $color-dragging;
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $white;
+$textColor:             #858585;
+
+
+// Links
+// -------------------------
+$linkColor:             $swissBlue;
+$linkColorHover:        $swissBlueLighter;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Ubuntu", "Droid Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$baseFontSize:          15px;
+$baseFontFamily:        $sansFontFamily;
+$baseLineHeight:        20px;
+$altFontFamily:         $serifFontFamily;
+
+$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    normal;    // instead of browser default, bold
+$headingsColor:         $grayDarker; // empty to use BS default, $textColor
+
+$h1FontSize:            36px;
+$h2FontSize:            30px;
+$h3FontSize:            24px;
+$h4FontSize:            18px;
+$h5FontSize:            14px;
+$h6FontSize:            12px;
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          11px 19px; // 44px
+$paddingSmall:          2px 10px;  // 26px
+$paddingMini:           0 6px;   // 22px
+
+$paddingDefault:        15px;
+$marginDefault:         20px;
+
+$baseBorderRadius:      0;
+$borderRadiusLarge:     0;
+$borderRadiusSmall:     0;
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent; // overall background-color
+$tableBackgroundAccent:             #f9f9f9; // for striping
+$tableBackgroundHover:              #f5f5f5; // for hover
+$tableBorder:                       #ddd; // table and cell border
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     #ddd;
+$btnBackgroundHighlight:            #d8d8d8;
+$btnBorder:                         #ccc;
+
+$btnPrimaryBackground:              $swissOrange;
+$btnPrimaryBackgroundHighlight:     $swissOrangeLight;
+
+$btnInfoBackground:                 $swissBlue;
+$btnInfoBackgroundHighlight:        $swissBlue;
+
+$btnSuccessBackground:              $swissGreen;
+$btnSuccessBackgroundHighlight:     $swissGreen;
+
+$btnWarningBackground:              $swissOrange;
+$btnWarningBackgroundHighlight:     $swissOrange;
+
+$btnDangerBackground:               $swissRed;
+$btnDangerBackgroundHighlight:      $swissRed;
+
+$btnInverseBackground:              #444;
+$btnInverseBackgroundHighlight:     #444;
+
+
+// Navs
+// -------------------------
+$navSimpleLinkColor:                #ABABAB;
+$navSimpleLinkColorHover:           #858585;
+$navSimpleLinkColorActive:          $swissOrange;
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white;
+//$inputBorder:                   #ccc;
+$inputBorder:                   #B0B2B4;
+$inputBorderRadius:             $baseBorderRadius;
+$inputDisabledBackground:       $grayLighter;
+$formActionsBackground:         #f5f5f5;
+$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;
+$dropdownBorder:                rgba(0,0,0,.2);
+$dropdownDividerTop:            #ddd;
+$dropdownDividerBottom:         $white;
+
+$dropdownLinkColor:             $swissBlueLight;
+$dropdownLinkColorHover:        $swissBlueLighter;
+$dropdownLinkColorActive:       $swissBlueLighter;
+
+$dropdownLinkBackgroundActive:  $swissBlueHoverBg;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000;
+$zindexPopover:           1010;
+$zindexTooltip:           1030;
+$zindexFixedNavbar:       1030;
+$zindexModalBackdrop:     1040;
+$zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+$wellBackground:                  #f5f5f5;
+
+
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
+
+$navbarHeight:                    40px;
+$navbarHeightBottom:              25px;
+$navbarBackground:                $swissBlack;
+$navbarBackgroundHighlight:       $swissBlack;
+$navbarBorder:                    $swissBlack;
+
+$navbarText:                      $white;
+$navbarLinkColor:                 $white;
+$navbarLinkColorHover:            $swissOrange;
+$navbarLinkColorActive:           $swissOrange;
+$navbarLinkBackgroundHover:       transparent;
+$navbarLinkBackgroundActive:      transparent;
+
+$navbarBrandColor:                $navbarLinkColor;
+
+// Inverted navbar
+$navbarInverseBackground:                $swissBlack;
+$navbarInverseBackgroundHighlight:       $swissBlack;
+$navbarInverseBorder:                    $swissBlack;
+
+$navbarInverseText:                      $white;
+$navbarInverseLinkColor:                 $white;
+$navbarInverseLinkColorHover:            $swissOrange;
+$navbarInverseLinkColorActive:           $swissOrange;
+$navbarInverseLinkBackgroundHover:       transparent;
+$navbarInverseLinkBackgroundActive:      transparent;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackgroundFocus:     $white;
+$navbarInverseSearchBorder:              $navbarInverseBackground;
+$navbarInverseSearchPlaceholderColor:    #ccc;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor;
+
+$navbarLinkBorder:                       transparent;
+$navbarLinkBorderActive:                 $swissOrange;
+
+$navbarFixedTopFontSize:                 16px;
+$navbarFixedTopLineHeight:               18px;
+
+// Primary navbar
+$navbarPrimaryHeight:                    42px;
+$navbarPrimaryFontSize:                  16px;
+$navbarPrimaryBackground:                $swissBlack;
+$navbarPrimaryLinkColor:                 $white;
+$navbarPrimaryLinkColorActive:           $white;
+$navbarPrimaryLinkBackgroundActive:      $swissOrange;
+
+// Secondary navbar
+$navbarSecondaryHeight:                  42px;
+$navbarSecondaryFontSize:                16px;
+$navbarSecondaryBackground:              #3A3A3A;
+$navbarSecondaryLinkColor:               $grayLight;
+$navbarSecondaryLinkColorActive:         $white;
+$navbarSecondaryLinkBackgroundActive:    $swissOrange;
+$navbarSecondaryLinkBorderColor:         transparent;
+$navbarSecondaryLinkBorderColorActive:   $swissOrange;
+
+// Footer navbar
+$navbarFooterHeight:                     30px;
+$navbarFooterFontSize:                   14px;
+$navbarFooterBackground:                 $swissBlack;
+$navbarFooterLinkColor:                  $white;
+$navbarFooterLinkColorActive:            $white;
+$navbarFooterLinkBackgroundActive:       $swissOrange;
+
+// Pagination
+// -------------------------
+$paginationBackground:                #fff;
+$paginationBorder:                    #ddd;
+$paginationActiveBackground:          #f5f5f5;
+
+
+// Progress
+// -------------------------
+$progressCircleBorderColor:           $swissOrange;
+
+
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $grayLighter;
+$heroUnitHeadingColor:            inherit;
+$heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken($warningBackground, 3%);
+
+$errorText:               #bd0000;
+$errorBackground:         #fbf2f2;
+$errorBorder:             #fbf2f2;
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken($successBackground, 5%);
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken($infoBackground, 7%);
+
+
+// Alerts
+// -------------------------
+$alertErrorColor:         $white;
+$alertErrorBorder:        #e00707;
+$alertErrorBackground:    #e00707;
+
+
+// Tooltips and popovers
+// -------------------------
+$tooltipColor:            #fff;
+$tooltipBackground:       #000;
+$tooltipArrowWidth:       5px;
+$tooltipArrowColor:       $tooltipBackground;
+
+$popoverBackground:       #fff;
+$popoverArrowWidth:       10px;
+$popoverArrowColor:       #fff;
+$popoverTitleBackground:  darken($popoverBackground, 3%);
+
+// Special enhancement for popovers
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1;
+$popoverArrowOuterColor:  rgba(0,0,0,.25);

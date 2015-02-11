@@ -1,0 +1,23 @@
+//
+// Courses section and nodes.
+// --------------------------------------------------
+
+.page-courses {
+
+  .view-courses-list .panel {
+    min-height: 120px; // Makes the panels equal heights.
+  }
+
+}
+
+.node-type-course {
+  .region-content .node h3 + .field-name-field-level,
+  .region-content .node h3 + .field-name-field-level + .field-name-field-track {
+    margin-top: 5px;
+    margin-bottom: $marginDefault / 2;
+  }
+  .field-name-body {
+    clear: both;
+    margin-top: $marginDefault;
+  }
+}
